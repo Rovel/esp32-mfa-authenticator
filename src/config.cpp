@@ -230,12 +230,12 @@ Configuration Configuration::parse(const String &json_string)
 	return config;
 }
 
-bool Configuration::is_authentication_configured()
+bool Configuration::is_authentication_configured() const
 {
 	return !authentication.pin.hash.isEmpty() && !authentication.pin.key.isEmpty();
 }
 
-bool Configuration::is_manager_configured()
+bool Configuration::is_manager_configured() const
 {
 	return !manager.authentication.username.isEmpty() && !manager.authentication.password.isEmpty() && !manager.authentication.key.isEmpty();
 }

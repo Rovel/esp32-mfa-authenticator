@@ -49,8 +49,8 @@ public:
 	static Configuration load();
 	static Configuration parse(const String &json_string);
 	bool save() const;
-	bool is_authentication_configured();
-	bool is_manager_configured();
+	bool is_authentication_configured() const;
+	bool is_manager_configured() const;
 };
 
 #endif // CONFIGURATION_H

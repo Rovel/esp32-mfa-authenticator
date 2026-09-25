@@ -16,7 +16,7 @@ void double_touch_handler()
 	ESP_LOGV(TAG, "double touch handler executed");
 }
 
-void init_touch_screen(Configuration config)
+void init_touch_screen(const Configuration& config)
 {
 	ESP_LOGI(TAG, "initializing touch screen");
 

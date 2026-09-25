@@ -106,7 +106,7 @@ void on_display_change(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *c
     lv_disp_flush_ready(disp);
 }
 
-void init_display(Configuration config)
+void init_display(const Configuration& config)
 {
     ESP_LOGI(TAG, "initializing display");
 
@@ -159,3 +159,5 @@ void display_register()
     reset_display_off_timer();
     ESP_LOGD(TAG, "display registered in lvgl");
 }
+
+

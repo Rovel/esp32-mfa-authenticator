@@ -98,3 +98,21 @@ void ui_task_handler()
 {
     lv_task_handler();
 }
+
+void ui_show_error_screen(const char *title, const char *message)
+{
+    lv_obj_t *error_screen = lv_obj_create(NULL);
+    lv_obj_clear_flag(error_screen, LV_OBJ_FLAG_SCROLLABLE);
+
+    lv_obj_t *title_label = lv_label_create(error_screen);
+    lv_label_set_text(title_label, title);
+    lv_obj_set_style_text_font(title_label, &lv_font_montserrat_22, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_align(title_label, LV_ALIGN_TOP_MID, 0, 20);
+
+    lv_obj_t *message_label = lv_label_create(error_screen);
+    lv_label_set_text(message_label, message);
+    lv_obj_set_style_text_align(message_label, LV_TEXT_ALIGN_CENTER, 0);
+    lv_obj_align(message_label, LV_ALIGN_CENTER, 0, 0);
+
+    lv_scr_load(error_screen);
+}

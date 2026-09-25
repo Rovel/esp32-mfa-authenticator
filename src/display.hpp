@@ -11,7 +11,7 @@
 #include "./ui/ui.h"
 #include "config.hpp"
 
-void init_display(Configuration config);
+void init_display(const Configuration& config);
 void display_register();
 void turn_off_display();
 void turn_on_display();
